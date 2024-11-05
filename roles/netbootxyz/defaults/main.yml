@@ -1,8 +1,8 @@
-boot_domain: boot.netboot.xyz
+boot_domain: boot.indexyz.me
 boot_timeout: 300000
 boot_version: 2.x
 bootloader_disks:
-- netboot.xyz
+- indexyz.me
 bootloader_http_enabled: true
 bootloader_https_enabled: true
 bootloaders:
@@ -122,8 +122,8 @@ kernel_params: initrd=initrd.magic ${cmdline}
 live_endpoint: https://github.com/netbootxyz
 make_num_jobs: 1
 memdisk_location: http://${boot_domain}/memdisk
-netbootxyz_conf_dir: /etc/netbootxyz
-netbootxyz_root: /var/www/html
+netbootxyz_conf_dir: ./etc/netbootxyz
+netbootxyz_root: ./output
 pciids_url: https://raw.githubusercontent.com/netbootxyz/pciids/master/pciids.ipxe
 pipxe_branch: master
 pipxe_repo: https://github.com/netbootxyz/pipxe
@@ -483,6 +483,15 @@ releases:
       name: VMware
     - key: vultr
       name: Vultr
+  tencentos:
+    enabled: true
+    menu: linux
+    mirror: https://mirrors.cloud.tencent.com/tencentos
+    name: TencentOS Server
+    versions:
+    - arch: x86_64
+      code_name: 3.1
+      name: 3.1
   tinycore:
     enabled: true
     menu: linux
